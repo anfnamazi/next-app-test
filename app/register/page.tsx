@@ -1,9 +1,9 @@
 "use client";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { FormEventHandler, FunctionComponent } from "react";
-import { registerUrl } from "../libs/constructors";
 import { LocalStorageEnum, QueryKeyEnum, UserRoleEnum } from "../@types/enum";
 import useAuth from "../hooks/useAuth";
+import { registerUrl } from "../libs/constructors";
 const sign = require("jwt-encode");
 
 interface RegisterProps {}
@@ -24,12 +24,11 @@ const Register: FunctionComponent<RegisterProps> = () => {
     onSuccess: (data) => {
       // Invalidate and refetch
       queryClient.invalidateQueries({ queryKey: [QueryKeyEnum.USERS] });
+      if (!data?.user) return alert("check inputs!");
       // FIXME: json-server-auth not supported custom property in jwt
-      if (data?.user) {
-        const token = sign(data.user, "psp");
-        localStorage.setItem(LocalStorageEnum.TOKEN, token);
-        setToken(token);
-      }
+      const token = sign(data.user, "psp");
+      localStorage.setItem(LocalStorageEnum.TOKEN, token);
+      setToken(token);
     },
   });
 
