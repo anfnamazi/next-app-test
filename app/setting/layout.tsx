@@ -1,10 +1,11 @@
 "use client";
-import { FunctionComponent } from "react";
-import { UserRoleEnum } from "../@types/enum";
 import { jwtDecode } from "jwt-decode";
 import { redirect } from "next/navigation";
-import { routes } from "../libs/constructors";
+import { FunctionComponent } from "react";
+import { UserRoleEnum } from "../@types/enum";
+import { Breadcrumbs } from "../components/BreadCrumbs";
 import useAuth from "../hooks/useAuth";
+import { routes } from "../libs/constructors";
 
 interface SettingLayoutProps {
   readonly children: React.ReactNode;
@@ -19,7 +20,13 @@ const SettingLayout: FunctionComponent<SettingLayoutProps> = ({ children }) => {
     return redirect(routes.root);
   }
 
-  return <main>{children}</main>;
+  return (
+    <main>
+      <Breadcrumbs />
+      <br />
+      {children}
+    </main>
+  );
 };
 
 export default SettingLayout;
