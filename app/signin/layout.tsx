@@ -1,8 +1,8 @@
 "use client";
-import { FunctionComponent } from "react";
 import { redirect } from "next/navigation";
-import { routes } from "../libs/constructors";
+import { FunctionComponent } from "react";
 import useAuth from "../hooks/useAuth";
+import { routes } from "../libs/constructors";
 
 interface SigninLayoutProps {
   readonly children: React.ReactNode;
@@ -12,7 +12,7 @@ const SigninLayout: FunctionComponent<SigninLayoutProps> = ({ children }) => {
   const { token } = useAuth();
 
   if (token) {
-    redirect(routes.root);
+    return redirect(routes.root);
   }
   return <main>{children}</main>;
 };
