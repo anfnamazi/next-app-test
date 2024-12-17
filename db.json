@@ -1,0 +1,76 @@
+{
+  "users": [
+    {
+      "email": "anf@g.com",
+      "password": "$2a$10$4QatsUSCpmL5w.abzLshue2yyyGEtU.tChcB4CwUZTGZGCYpCUBNS",
+      "role": "admin",
+      "id": 5
+    },
+    {
+      "email": "test@test.com",
+      "password": "$2a$10$.8czXIKPcDIUZNX2tO80duQWM7AbT13OFrdXzq38rLqwQLDcGxwbe",
+      "role": "admin",
+      "id": 6
+    },
+    {
+      "email": "test2@test.com",
+      "password": "$2a$10$1zF.IpObazzbLQqXnBnZHOeGWA.zfwLgHMAR70YPqlbKqiU3ouSAa",
+      "role": "admin",
+      "id": 7
+    },
+    {
+      "email": "test23@test.com",
+      "password": "$2a$10$jDoKIQVkJhm9BnQg6Lo5Fu4cmi2U59ERSAC.x/I7I/qxq7donc6Hi",
+      "role": "admin",
+      "id": 8
+    },
+    {
+      "email": "test233@test.com",
+      "password": "$2a$10$2LGqkqbEBIMcFHOnBvwAaemqRNgqWu0rMQU5uR9oE7Mw3trmHCIFm",
+      "role": "admin",
+      "id": 9
+    },
+    {
+      "email": "test2323@test.com",
+      "password": "$2a$10$SDMshRzTjowN7Jy4xMQwUuRdQa4IMDtnL0K.qGJBabRn.u6/jk9QS",
+      "role": "admin",
+      "id": 10
+    },
+    {
+      "email": "test23e@test.com",
+      "password": "$2a$10$nUlpSg76QNJKabMUXXRVOu1qc1EI3dDonOPubjwdp9lc0JebfCk1u",
+      "firstname": "admin",
+      "id": 11
+    },
+    {
+      "email": "test11@test.com",
+      "password": "$2a$10$bG6rSnqsp69XsLPpCTwrte4kEYzAG7AIUyXTvlPOtqsi0khPiZmTG",
+      "role": "admin",
+      "id": 12
+    },
+    {
+      "email": "mlk.nilo.o@gmail.com",
+      "password": "$2a$10$sbCVUnpbuYYuLs0Lrz908egh7RZw.Wzu1XDUOAnMmgoxa23s57Ni2",
+      "role": "user",
+      "id": 13
+    },
+    {
+      "email": "mlk.nilo2.o@gmail.com",
+      "password": "$2a$10$mPHqO42ROd1KRVMa7CVQBOSv3rTcwbjJF8RXC2Ag5gII/SuXpOlZG",
+      "role": "user",
+      "id": 14
+    },
+    {
+      "email": "mlk.2.o@gmail.com",
+      "password": "$2a$10$PL7jrqiCFzL.kkhVCN5TNuNerjiwKIVR9OhSCBtmjyV1M3fepK26a",
+      "role": "user",
+      "id": 15
+    },
+    {
+      "email": "mohamadsarafex@gmail.com",
+      "password": "$2a$10$gk8bEUOiMwWMLELAwCWqXuggzDCAG8fxsy8OfDX2l/izoWKJTlsTS",
+      "role": "admin",
+      "id": 16
+    }
+  ]
+}

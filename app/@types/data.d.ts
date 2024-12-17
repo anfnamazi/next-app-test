@@ -8,16 +8,11 @@ interface IPostData {
 interface IUserData {
   email: string;
   id: number;
-  name: string;
-  phone: string;
-  username: string;
-  website: string;
-  company: ICompany;
-  address: Record<string, any>;
+  password: string;
+  role: string;
 }
 
-interface ICompany {
-  bs: string;
-  catchPhrase: string;
-  name: string;
+interface IUserResponse {
+  accessToken: string;
+  user: IUserData;
 }

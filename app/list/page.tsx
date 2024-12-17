@@ -1,16 +1,15 @@
 "use client";
 import { useQuery } from "@tanstack/react-query";
 import { FunctionComponent } from "react";
+import { postUrl } from "../libs/constructors";
+import { QueryKeyEnum } from "../@types/enum";
 
 interface ListProps {}
 
 const List: FunctionComponent<ListProps> = () => {
   const { isPending, error, data } = useQuery<IPostData[]>({
-    queryKey: ["repoData"],
-    queryFn: () =>
-      fetch("https://jsonplaceholder.typicode.com/posts").then((res) =>
-        res.json()
-      ),
+    queryKey: [QueryKeyEnum.POSTS],
+    queryFn: () => fetch(postUrl).then((res) => res.json()),
   });
 
   if (isPending) return "Loading...";
