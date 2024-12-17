@@ -1,8 +1,8 @@
 "use client";
 import { useQuery } from "@tanstack/react-query";
 import { FunctionComponent } from "react";
-import { postUrl } from "../libs/constructors";
 import { QueryKeyEnum } from "../@types/enum";
+import { postUrl } from "../libs/constructors";
 
 interface ListProps {}
 

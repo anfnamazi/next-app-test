@@ -53,7 +53,9 @@ const Signin: FunctionComponent<SigninProps> = () => {
       <br />
       <button type="submit">Signin</button>
       <br />
-      <Link href={routes.register}>Register</Link>
+      <Link href={routes.register} prefetch={false}>
+        Register
+      </Link>
     </form>
   );
 };

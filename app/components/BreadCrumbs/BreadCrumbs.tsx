@@ -10,7 +10,9 @@ const BreadCrumbs: FunctionComponent<BreadCrumbsProps> = () => {
   const pathNames = paths.split("/").join(" > ");
   return (
     <div className="flex items-baseline">
-      <Link href="/">Home</Link>
+      <Link href="/" prefetch={false}>
+        Home
+      </Link>
       {pathNames}
     </div>
   );

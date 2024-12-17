@@ -7,12 +7,16 @@ interface MenuProps {}
 const Menu: FunctionComponent<MenuProps> = () => {
   return (
     <div className="flex flex-col">
-      <Link href={routes.list}>List</Link>
-      <Link href={routes.setting}>Setting</Link>
+      <Link href={routes.list} prefetch={false}>
+        List
+      </Link>
+      <Link href={routes.setting} prefetch={false}>
+        Setting
+      </Link>
       <br />
       <br />
       <br />
-      <Link href={routes.signout} style={{ color: "red" }}>
+      <Link href={routes.signout} prefetch={false} style={{ color: "red" }}>
         SignOut
       </Link>
     </div>
