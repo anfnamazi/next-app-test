@@ -3,11 +3,6 @@ export enum QueryKeyEnum {
   USERS = "usersData",
 }
 
-export enum UserRoleEnum {
-  ADMIN = "admin",
-  USER = "user",
-}
-
-export enum LocalStorageEnum {
+export enum CookieEnum {
   TOKEN = "token",
 }

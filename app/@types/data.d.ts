@@ -5,14 +5,20 @@ interface IPostData {
   userId: number;
 }
 
-interface IUserData {
+interface IUserRequest {
   email: string;
-  id: number;
   password: string;
-  role: string;
+}
+
+interface IUserData extends IUserRequest {
+  id: number;
 }
 
 interface IUserResponse {
   accessToken: string;
   user: IUserData;
+}
+
+interface IAuthResponse {
+  accessToken: string;
 }

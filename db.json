@@ -3,8 +3,12 @@
     {
       "email": "anf@gmail.com",
       "password": "$2a$10$DSWsUAzuk7/0KL91GUVgQuafufwcd2AHR5c0/fKl6p1F5Zi6vWZ1y",
-      "role": "admin",
       "id": 1
+    },
+    {
+      "email": "test@test.com",
+      "password": "$2a$10$nmFZLIcWJCt0WKvRFr6vZ.Vc/3IQJI3hbg1b9ma.gsXXID.ISFWzW",
+      "id": 2
     }
   ]
 }
