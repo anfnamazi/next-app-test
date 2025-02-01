@@ -1,12 +1,15 @@
 "use client";
 import AuthApiAdapter from "@/app/adapters/auth";
+import { routes } from "@/app/libs/config/constructors";
 import useAuthClient from "@/app/libs/hooks/useAuthClient";
+import { useRouter } from "next/navigation";
 import { FunctionComponent } from "react";
 
 interface RegisterFormProps {}
 
 const RegisterForm: FunctionComponent<RegisterFormProps> = () => {
   const { setToken } = useAuthClient();
+  const { push } = useRouter();
 
   const handleAction = async (formData: FormData) => {
     try {
@@ -17,6 +20,7 @@ const RegisterForm: FunctionComponent<RegisterFormProps> = () => {
       };
       const response = await authApi.register(userReq);
       setToken(response.accessToken);
+      push(routes.root);
     } catch (error: any) {
       alert(error.message);
     }

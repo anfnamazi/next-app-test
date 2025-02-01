@@ -3,7 +3,7 @@ import AuthApiAdapter from "@/app/adapters/auth";
 import { routes } from "@/app/libs/config/constructors";
 import useAuthClient from "@/app/libs/hooks/useAuthClient";
 import Link from "next/link";
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
 import { FunctionComponent } from "react";
 
 interface SigninFormProps {}
