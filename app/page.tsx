@@ -2,6 +2,7 @@ import Link from "next/link";
 import { redirect } from "next/navigation";
 import { FunctionComponent } from "react";
 import PostApiAdapter from "./adapters/post";
+import Posts from "./components/Posts";
 import { routes } from "./libs/config/constructors";
 import useAuth from "./libs/hooks/useAuth";
 
@@ -12,7 +13,7 @@ export const revalidate = 60;
 const Home: FunctionComponent<HomeProps> = async () => {
   const { token } = await useAuth();
   if (!token) {
-    return redirect(routes.signin);
+    return redirect(routes.signin.path);
   }
 
   const postApi = new PostApiAdapter();
@@ -20,13 +21,15 @@ const Home: FunctionComponent<HomeProps> = async () => {
 
   return (
     <main>
-      <ul>
-        {posts.map((i) => (
-          <li key={i.id}>{i.title}</li>
-        ))}
-      </ul>
+      <section className="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-4">
+        <Posts posts={posts} />
+      </section>
       <br />
-      <Link href={routes.signout} prefetch={false} style={{ color: "red" }}>
+      <Link
+        href={routes.signout.path}
+        prefetch={false}
+        style={{ color: "red" }}
+      >
         SignOut
       </Link>
     </main>

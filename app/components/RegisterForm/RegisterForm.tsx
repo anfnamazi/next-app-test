@@ -20,7 +20,7 @@ const RegisterForm: FunctionComponent<RegisterFormProps> = () => {
       };
       const response = await authApi.register(userReq);
       setToken(response.accessToken);
-      push(routes.root);
+      push(routes.root.path);
     } catch (error: any) {
       alert(error.message);
     }

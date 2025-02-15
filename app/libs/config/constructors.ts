@@ -6,9 +6,23 @@ export const userUrl = `${localUrl}/users`;
 export const registerUrl = `${localUrl}/register`;
 export const signinUrl = `${localUrl}/signin`;
 
-export const routes = {
-  root: "./",
-  register: "./register",
-  signin: "./signin",
-  signout: "./signout",
+interface IRoutes {
+  root: IRoute;
+  details: Required<IRoute>;
+  register: IRoute;
+  signin: IRoute;
+  signout: IRoute;
+}
+
+export const routes: IRoutes = {
+  root: { path: "/" },
+  register: { path: "./register" },
+  signin: { path: "./signin" },
+  signout: { path: "./signout" },
+  details: {
+    path: "/details",
+    url(id) {
+      return `${this.path}/${id}`;
+    },
+  },
 };

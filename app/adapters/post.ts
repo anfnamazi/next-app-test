@@ -11,6 +11,16 @@ class PostApiAdapter implements PostRepository {
 
     return response.json();
   }
+
+  async getById(id: number): Promise<IPostData> {
+    const response = await fetch(`${postUrl}/${id}`);
+
+    if (!response.ok) {
+      throw new Error(`Response status: ${response.status}`);
+    }
+
+    return response.json();
+  }
 }
 
 export default PostApiAdapter;

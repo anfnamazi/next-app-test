@@ -21,7 +21,7 @@ const SigninForm: FunctionComponent<SigninFormProps> = () => {
       };
       const response = await authApi.signin(userReq);
       setToken(response.accessToken);
-      push(routes.root);
+      push(routes.root.path);
     } catch (error: any) {
       alert(error.message);
     }
@@ -35,7 +35,7 @@ const SigninForm: FunctionComponent<SigninFormProps> = () => {
       <br />
       <button type="submit">Signin</button>
       <br />
-      <Link href={routes.register} prefetch={false}>
+      <Link href={routes.register.path} prefetch={false}>
         Register
       </Link>
     </form>

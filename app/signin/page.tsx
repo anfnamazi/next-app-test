@@ -10,7 +10,7 @@ const Signin: FunctionComponent<SigninProps> = async () => {
   const { token } = await useAuth();
 
   if (token) {
-    return redirect(routes.root);
+    return redirect(routes.root.path);
   }
 
   return <SigninForm />;

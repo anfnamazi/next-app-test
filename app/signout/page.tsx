@@ -10,7 +10,7 @@ const Signout: FunctionComponent<SignoutProps> = () => {
   const { removeToken } = useAuthClient();
   removeToken();
 
-  return redirect(routes.signin);
+  return redirect(routes.signin.path);
 };
 
 export default Signout;
