@@ -4,7 +4,7 @@ import { routes } from "../config/constructors";
 import useAuth from "../hooks/useAuth";
 
 export function withAuth<TProps extends {}>(Component: FC<TProps>) {
-  async function AuthComponent(props: TProps) {
+  return async (props: TProps) => {
     const { token } = await useAuth();
 
     if (!token) {
@@ -12,6 +12,5 @@ export function withAuth<TProps extends {}>(Component: FC<TProps>) {
     }
 
     return <Component {...props} />;
-  }
-  return AuthComponent;
+  };
 }
