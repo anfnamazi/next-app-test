@@ -1,21 +1,15 @@
 import Link from "next/link";
-import { redirect } from "next/navigation";
 import { FunctionComponent } from "react";
 import PostApiAdapter from "./adapters/post";
 import Posts from "./components/Posts";
 import { routes } from "./libs/config/constructors";
-import useAuth from "./libs/hooks/useAuth";
+import { withAuth } from "./libs/HOC/withAuth";
 
 interface HomeProps {}
 
 export const revalidate = 60;
 
 const Home: FunctionComponent<HomeProps> = async () => {
-  const { token } = await useAuth();
-  if (!token) {
-    return redirect(routes.signin.path);
-  }
-
   const postApi = new PostApiAdapter();
   const posts = await postApi.getAll();
 
@@ -36,4 +30,4 @@ const Home: FunctionComponent<HomeProps> = async () => {
   );
 };
 
-export default Home;
+export default withAuth(Home);

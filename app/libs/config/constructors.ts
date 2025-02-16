@@ -16,9 +16,9 @@ interface IRoutes {
 
 export const routes: IRoutes = {
   root: { path: "/" },
-  register: { path: "./register" },
-  signin: { path: "./signin" },
-  signout: { path: "./signout" },
+  register: { path: "/register" },
+  signin: { path: "/signin" },
+  signout: { path: "/signout" },
   details: {
     path: "/details",
     url(id) {
